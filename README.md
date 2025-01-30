@@ -1,12 +1,16 @@
-# notes_hive_Database
-Simple Note App with Flutter and Hive
-A minimal and elegant note-taking application built with Flutter and Hive for local database storage. This app allows users to add and save notes efficiently.
+# my_note
 
-Features
-Add Notes: Easily add new notes with a simple and clean interface.
+A new Flutter project.
 
-Local Storage: Notes are stored locally using Hive, a lightweight and fast NoSQL database.
+## Getting Started
 
-Dark Theme: The app features a sleek dark theme for a modern look.
+This project is a starting point for a Flutter application.
 
-Responsive Design: The UI is designed to be responsive and user-friendly.
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
