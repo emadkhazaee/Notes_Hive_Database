@@ -1,7 +1,6 @@
 # my_note
 
-A new Flutter project.
-
+Simple Note App with Flutter
 ## Getting Started
 
 This project is a starting point for a Flutter application.
