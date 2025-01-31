@@ -5,17 +5,19 @@ class AddNotePage extends StatelessWidget {
   final TextEditingController _controller = TextEditingController();
   final Box notesBox = Hive.box('notes');
 
+  AddNotePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF333333),
+      backgroundColor: const Color(0xFF333333),
       appBar: AppBar(
-        backgroundColor: Color(0xFF333333),
-        title: Text(
+        backgroundColor: const Color(0xFF333333),
+        title: const Text(
           'Add note',
           style: TextStyle(color: Colors.white, fontSize: 30),
         ),
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.white,
         ),
       ),
@@ -26,7 +28,7 @@ class AddNotePage extends StatelessWidget {
           children: [
             TextField(
               controller: _controller,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'your note...',
                 labelStyle: TextStyle(color: Colors.white),
                 border: OutlineInputBorder(
@@ -39,10 +41,10 @@ class AddNotePage extends StatelessWidget {
                   borderSide: BorderSide(color: Colors.green),
                 ),
               ),
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
               maxLines: 5,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 if (_controller.text.isNotEmpty) {
@@ -51,10 +53,10 @@ class AddNotePage extends StatelessWidget {
                 }
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.green,
-                padding: EdgeInsets.symmetric(vertical: 15),
+                backgroundColor: Colors.green,
+                padding: const EdgeInsets.symmetric(vertical: 15),
               ),
-              child: Text('Add note',
+              child: const Text('Add note',
                   style: TextStyle(color: Colors.white, fontSize: 18)),
             ),
           ],

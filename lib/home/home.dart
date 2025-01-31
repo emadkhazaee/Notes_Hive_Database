@@ -5,11 +5,16 @@ import 'dart:math';
 import 'package:my_note/home/addnote/addnote.dart';
 import 'package:my_note/home/color/Colors.dart';
 
+// ignore: camel_case_types
 class home extends StatefulWidget {
+  const home({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _homeState createState() => _homeState();
 }
 
+// ignore: camel_case_types
 class _homeState extends State<home> {
   late Box notesBox;
 
@@ -28,13 +33,13 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF333333),
-        title: Text(
+        backgroundColor: const Color(0xFF333333),
+        title: const Text(
           'Notes',
           style: TextStyle(color: Colors.white, fontSize: 40),
         ),
       ),
-      backgroundColor: Color(0xFF222222),
+      backgroundColor: const Color(0xFF222222),
       body: ValueListenableBuilder(
         valueListenable: notesBox.listenable(),
         builder: (context, Box box, _) {
@@ -44,10 +49,10 @@ class _homeState extends State<home> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/null_DB.png'),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     'Create your first note !',
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
@@ -65,27 +70,28 @@ class _homeState extends State<home> {
                 onDismissed: (direction) {
                   notesBox.deleteAt(index);
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('Your note was deleted')),
+                    const SnackBar(content: Text('Your note was deleted')),
                   );
                 },
                 background: Container(
                   color: Colors.red,
                   alignment: Alignment.centerLeft,
-                  child: Icon(Icons.delete, color: Colors.white),
+                  child: const Icon(Icons.delete, color: Colors.white),
                 ),
                 child: Container(
-                  margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                  padding: EdgeInsets.all(16),
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                  padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: getRandomColor(),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
                     note.toString(),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: const Color.fromARGB(255, 0, 0, 0),
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
                 ),
@@ -101,8 +107,8 @@ class _homeState extends State<home> {
             MaterialPageRoute(builder: (context) => AddNotePage()),
           );
         },
-        backgroundColor: Color(0xFF333333),
-        child: Icon(Icons.add, color: Colors.white),
+        backgroundColor: const Color(0xFF333333),
+        child: const Icon(Icons.add, color: Colors.white),
       ),
     );
   }
